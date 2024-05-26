@@ -1,8 +1,10 @@
 from ejercicio1.mcd import mcd
 from ejercicio2.mcm import mcm
 from ejercicio4.palabra_frecuente import count_words, most_freq_word
+from ejercicio5.get_int import get_int_recur, get_int_iter
 
 # Ejemplo ejercicio 1 y 2
+print("### MCD - MCM ###")
 num1 = 18
 num2 = 12
 
@@ -13,6 +15,7 @@ print(f"El MCD entre {num1} y {num2} es: {mcd12}")
 print(f"El MCM entre {num1} y {num2} es: {mcm12}")
 
 # Ejemplo ejercicio 3 y 4
+print("### Palábra más frecuente ###")
 txt = '''
 En matemáticas la sucesión de Fibonacci es una sucesión infinita
 de números naturales
@@ -30,3 +33,13 @@ for word, freq in freqs.items():
     print(f"{word}: {freq}")
 
 print(f"Palabra más frecuente: {popular_word[0]} - {popular_word[1]} veces")
+
+# Ejemplo ejercicio 5
+print("### get_int (Iterativo) ###")
+user_num = get_int_iter()
+
+print(f"El valor ingresado fue: {user_num}")
+
+print("### get_int (Recursivo) ###")
+user_num2 = get_int_recur()
+print(f"El valor ingresado fue: {user_num2}")
