@@ -3,6 +3,7 @@ from ejercicio2.mcm import mcm
 from ejercicio4.palabra_frecuente import count_words, most_freq_word
 from ejercicio5.get_int import get_int_recur, get_int_iter
 from ejercicio6.Persona import Persona
+from ejercicio7.Cuenta import Cuenta
 
 # Ejemplo ejercicio 1 y 2
 print("### MCD - MCM ###")
@@ -53,8 +54,23 @@ my_name = input("Ingrese el nombre: ")
 my_age = input("Ingrese la edad: ")
 my_dni = input("Ingrese el DNI: ")
 
-persona1.set_name(my_age)
+persona1.set_name(my_name)
 persona1.set_age(int(my_age))
 persona1.set_dni(int(my_dni))
 
 persona1.mostrar()
+
+# Ejemplo de Ejercicio 7
+persona2 = Persona(name="Juan Perez", age=30, dni=12345678)
+cuenta = Cuenta(titular=persona2)
+
+cuenta.mostrar()
+
+cuenta.ingresar(500.50)
+cuenta.mostrar()
+
+cuenta.retirar(200)
+cuenta.mostrar()
+
+cuenta.retirar(1000)  # La cuenta puede estar en números rojos
+cuenta.mostrar()
