@@ -4,7 +4,7 @@ class Persona:
         self.set_age(age)
         self.set_dni(dni)
 
-    def get_name(self):
+    def get_name(self) -> str:
         return self._name
     
     def set_name(self, name: str):
@@ -13,7 +13,7 @@ class Persona:
         else:
             raise ValueError("El nombre debe ser una cadena de caracteres.")
     
-    def get_age(self):
+    def get_age(self) -> int:
         return self._age
 
     def set_age(self, age: int):
@@ -22,7 +22,7 @@ class Persona:
         else:
             raise ValueError("La edad debe ser un número entero no negativo.")
     
-    def get_dni(self):
+    def get_dni(self) -> int:
         return self._dni
     
     def set_dni(self, dni: int):
@@ -37,5 +37,5 @@ class Persona:
         print(f"Edad: {self._age}")
         print(f"DNI: {self._dni}")
 
-    def es_mayor_de_edad(self):
+    def es_mayor_de_edad(self) -> bool:
         return self._age >= 18
