@@ -2,6 +2,7 @@ from ejercicio1.mcd import mcd
 from ejercicio2.mcm import mcm
 from ejercicio4.palabra_frecuente import count_words, most_freq_word
 from ejercicio5.get_int import get_int_recur, get_int_iter
+from ejercicio6.Persona import Persona
 
 # Ejemplo ejercicio 1 y 2
 print("### MCD - MCM ###")
@@ -43,3 +44,17 @@ print(f"El valor ingresado fue: {user_num}")
 print("### get_int (Recursivo) ###")
 user_num2 = get_int_recur()
 print(f"El valor ingresado fue: {user_num2}")
+
+# Ejemplo ejercicio 6
+print("### Persona ###")
+persona1 = Persona()
+
+my_name = input("Ingrese el nombre: ")
+my_age = input("Ingrese la edad: ")
+my_dni = input("Ingrese el DNI: ")
+
+persona1.set_name(my_age)
+persona1.set_age(int(my_age))
+persona1.set_dni(int(my_dni))
+
+persona1.mostrar()
