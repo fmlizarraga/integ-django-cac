@@ -4,6 +4,7 @@
 # Cuando el bloque try se ejecuta correctamente se devuelve el valor
 # terminando la funcion y el ciclo while de una vez
 # Este método es mas eficiente porque no agrega llamadas al stack
+# reitera utilizando el mismo contexto
 # pero es ligeramente menos legible por tener un nivel extra de anidacion
 
 def get_int_iter():
