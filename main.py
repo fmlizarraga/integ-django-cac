@@ -4,9 +4,10 @@ from ejercicio4.palabra_frecuente import count_words, most_freq_word
 from ejercicio5.get_int import get_int_recur, get_int_iter
 from ejercicio6.Persona import Persona
 from ejercicio7.Cuenta import Cuenta
+from ejercicio8.Cuenta_Joven import Cuenta_Joven
 
 # Ejemplo ejercicio 1 y 2
-print("### MCD - MCM ###")
+print("###### MCD - MCM ######")
 num1 = 18
 num2 = 12
 
@@ -37,17 +38,17 @@ for word, freq in freqs.items():
 print(f"Palabra más frecuente: {popular_word[0]} - {popular_word[1]} veces")
 
 # Ejemplo ejercicio 5
-print("### get_int (Iterativo) ###")
+print("\n\n###### get_int (Iterativo) ######")
 user_num = get_int_iter()
 
 print(f"El valor ingresado fue: {user_num}")
 
-print("### get_int (Recursivo) ###")
+print("###### get_int (Recursivo) ######")
 user_num2 = get_int_recur()
 print(f"El valor ingresado fue: {user_num2}")
 
 # Ejemplo ejercicio 6
-print("### Persona ###")
+print("\n\n###### Persona ######")
 persona1 = Persona()
 
 my_name = input("Ingrese el nombre: ")
@@ -61,6 +62,7 @@ persona1.set_dni(int(my_dni))
 persona1.mostrar()
 
 # Ejemplo de Ejercicio 7
+print("\n\n###### Cuenta ######")
 persona2 = Persona(name="Juan Perez", age=30, dni=12345678)
 cuenta = Cuenta(titular=persona2)
 
@@ -74,3 +76,25 @@ cuenta.mostrar()
 
 cuenta.retirar(1000)  # La cuenta puede estar en números rojos
 cuenta.mostrar()
+
+# Ejemplo de Ejercicio 8
+print("\n\n###### Cuenta Joven ######")
+persona3 = Persona(name="Carlos Rodriguez", age=23, dni=12345678)
+cuenta_joven = Cuenta_Joven(titular=persona3, cantidad=1000.0, bonif=10)
+
+cuenta_joven.mostrar()
+
+cuenta_joven.ingresar(500)
+cuenta_joven.mostrar()
+
+cuenta_joven.retirar(200)
+cuenta_joven.mostrar()
+
+cuenta_joven.retirar(1500)
+cuenta_joven.mostrar()
+
+persona_mayor = Persona(name="Ana Garcia", age=30, dni=87654321)
+cuenta_joven_no_valida = Cuenta_Joven(titular=persona_mayor, cantidad=1000.0, bonif=10)
+
+cuenta_joven_no_valida.mostrar()
+cuenta_joven_no_valida.retirar(300)
